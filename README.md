@@ -40,7 +40,7 @@
 
 # Command Line Arguments
 
-For command line arguments visit the page at **[https://newfies.github.io/RoKit-Releases/commandlinearguments.html](https://newfies.github.io/RoKit-Releases/commandlinearguments.html)**
+For command line arguments visit the page at **[https://newfies.github.io/Rokit-Releases/commandlinearguments.html](https://newfies.github.io/Rokit-Releases/commandlinearguments.html)**
 
 > [!NOTE]
 > I had to put the table on its own page because GitHubs markdown kept messing with the table, making it unreadable.
