@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arguments Table</title>
+  <style>
+    body {
+      background: #f5f7fa;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px 16px;
+      vertical-align: top;
+    }
+    th {
+      background: #dd2314;
+      color: white;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background: #f0f4f8;
+    }
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    details {
+      margin-top: 5px;
+    }
+    details summary {
+      cursor: pointer;
+      color: #dd2314;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Command Line Arguments</h2>
+  <table>
+    <tr>
+      <th>Argument</th>
+      <th>Input Type</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th>Results</th>
+    </tr>
+
+    <tr>
+      <td><code>--h</code> / <code>--help</code></td>
+      <td>NONE</td>
+      <td>Brings up the Python argument help</td>
+      <td><code>--help</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--file</code></td>
+      <td>File Path</td>
+      <td>Check for usernames in a specific file</td>
+      <td><code>--file Usernames.txt</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--l</code></td>
+      <td>Int</td>
+      <td>Generate usernames with X amount of characters</td>
+      <td><code>--l 10</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--format</code></td>
+      <td>Text</td>
+      <td>
+        <details>
+          <summary>Click for details</summary>
+          Generate usernames following a specific format:<br><br>
+          - <code>#</code> → Any digit 0–9<br>
+          - <code>^</code> → Any letter A–Z or a–z<br>
+          - <code>!</code> → Lock symbol after <code>#</code> or <code>^</code><br>
+          - <b>Anything else</b> → Literal character (locked)<br><br>
+          Supports counters for sequential usernames.<br>
+          Example: <code>[start=0, step=1]</code> → <code>0, 1, 2...</code>
+        </details>
+      </td>
+      <td>
+        <code>--format ###_^L</code><br>
+        <code>--format CoolGamer^^^!_[start=0, step=1]</code>
+      </td>
+      <td>
+        321_PL<br>
+        092_XL<br><br>
+        CoolGamerXSP_0<br>
+        CoolGamerTBP_1
+      </td>
+    </tr>
+
+    <tr>
+      <td><code>--wordgen</code></td>
+      <td>NONE</td>
+      <td>Generates words from the <code>english-words</code> package</td>
+      <td><code>--wordgen</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--barcodes</code></td>
+      <td>NONE</td>
+      <td>Generate barcode style usernames</td>
+      <td><code>--barcodes</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--num</code> / <code>--numbers</code></td>
+      <td>NONE</td>
+      <td>Allow numbers in username</td>
+      <td><code>--num</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--und</code> / <code>--underscores</code></td>
+      <td>NONE</td>
+      <td>Allow underscores in username</td>
+      <td><code>--underscores</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--let</code> / <code>--letters</code></td>
+      <td>NONE</td>
+      <td>Allow letters in username</td>
+      <td><code>--let</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--proxy</code></td>
+      <td>File Path</td>
+      <td>Use proxies from a file (<code>http://ip:port</code>)</td>
+      <td><code>--proxy proxylist.txt</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--range</code></td>
+      <td>Int</td>
+      <td>Check a specific amount of usernames</td>
+      <td><code>--range 12300</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--skip</code></td>
+      <td>Int</td>
+      <td>Skip ahead a number of lines in input file</td>
+      <td><code>--skip 1005</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--wh</code> / <code>--webhook</code></td>
+      <td>URL</td>
+      <td>Send valid usernames to a specific webhook URL</td>
+      <td><code>--wh https://discord.com/api/webhooks/80085/8008135/80084</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--alt</code></td>
+      <td>NONE</td>
+      <td>Send valid usernames to the <code>config.json</code> alt webhook URL</td>
+      <td><code>--alt</code></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><code>--delay</code></td>
+      <td>Int</td>
+      <td>Set a delay between each checked username</td>
+      <td><code>--delay 5</code></td>
+      <td></td>
+    </tr>
+
+  </table>
+</body>
+</html>

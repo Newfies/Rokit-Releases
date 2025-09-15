@@ -1,0 +1,40 @@
+{
+  "Webhooks": {
+    "Main": "123",
+    "Alt": "123",
+    "Message_Plain": {
+        "content": "[✅] ``{username}`` is valid!"
+    },
+    "Message_Embed": {
+        "components": [],
+        "embeds": [
+            {
+                "title": "Username Found!",
+                "color": 3066993,
+                "description": "{username} is valid!\n\n```\n{username}\n```"
+            }
+        ]
+    },
+    "Webhook_Queue": "2"
+  },
+
+  "Output": {
+    "Valid_Usernames": "res/checked/valid.txt",
+    "Invalid_Usernames": "res/checked/invalid.txt",
+    "Logs": "res/logs/"
+  },
+ 
+  "API": {
+    "Request_Timeout": "8"
+  },
+
+  "LoggingAndOutPutOptions": {
+    "Write_Valid_Usernames": "true",
+    "Write_Invalid_Usernames": "true",
+    "Write_Logs": "true",
+    "Output_Terminal_Logs": "true",
+    "Use_Webhook_Embed": "false",
+    "Use_Webhook_Queue": "true",
+    "Use_One_Log": "false"
+  }
+}
